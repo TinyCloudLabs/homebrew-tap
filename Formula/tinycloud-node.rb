@@ -6,6 +6,8 @@ class TinycloudNode < Formula
   license :cannot_represent
   head "https://github.com/TinyCloudLabs/tinycloud-node.git", branch: "main"
 
+  depends_on "rust" => :build
+
   # --- Stable release block -------------------------------------------------
   # Placeholders below. TC-79 (Homebrew packaging) ships in the same PR as the
   # `tinycloud node service` / `serve` CLI surface this formula depends on.
@@ -39,8 +41,6 @@ class TinycloudNode < Formula
       sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
     end
   end
-
-  depends_on "rust" => :build
 
   # --- HEAD build (usable today) --------------------------------------------
   # `head` above intentionally targets the `main` branch (Homebrew style: head
