@@ -17,25 +17,26 @@ class TinycloudNode < Formula
   # [workspace.metadata.dist] in Cargo.toml). Until then this stable block is
   # inert scaffolding; `brew install tinycloud-node` will fail to resolve a
   # bottle/tarball, and `--HEAD` (below) is the only working install path.
-  version "0.0.0" # PLACEHOLDER — set to the first release tag that includes this CLI (e.g. "1.5.0")
+  # `version` is intentionally omitted: brew scans it from the `vX.Y.Z` tag in
+  # each URL below, so bumping the tag is the only edit needed on release.
   on_macos do
     on_arm do
       url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-aarch64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
     end
     on_intel do
       url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-x86_64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
     end
   end
   on_linux do
     on_arm do
       url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
     end
     on_intel do
       url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
     end
   end
 
@@ -81,7 +82,8 @@ class TinycloudNode < Formula
   # two paths stay behaviorally equivalent, but installs/manages the plist via
   # Homebrew's service manager instead of the CLI's own launchd/systemd calls.
   service do
-    run [opt_bin/"tinycloud", "serve", "--config", "#{Dir.home}/Library/Application Support/TinyCloud Node/tinycloud.toml"]
+    config_path = "#{Dir.home}/Library/Application Support/TinyCloud Node/tinycloud.toml"
+    run [opt_bin/"tinycloud", "serve", "--config", config_path]
     keep_alive true
     log_path var/"log/tinycloud-node.log"
     error_log_path var/"log/tinycloud-node.err.log"
