@@ -1,41 +1,64 @@
 class TinycloudNode < Formula
-  desc "TinyCloud Protocol node — local-first, user-controlled cloud storage daemon"
+  desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  # TinyCloud Ecosystem General Public License (EGPL) v1.5 — not an SPDX
-  # identifier. Full text: https://github.com/TinyCloudLabs/tinycloud-node/blob/main/LICENSE.md
-  license :cannot_represent
-  head "https://github.com/TinyCloudLabs/tinycloud-node.git", branch: "main"
+  version "1.5.0"
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "d9ad7cba65b40890643ced18e23e0d4528b977a873d40c8d6eb6da0cc7b4d918"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "20e3bbf43b4b0ddf21ce2bf02330a592f3ce7d8b11b75feac542e64eba46b3f7"
+    end
+  end
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "02b36dbb1010d828f44cec4c57c0f674f8e00f5fad68e9015d6e344521e75031"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ff0b5418b71ec043903cc29fc6ca8e42d87ad99f412ddedf911d497f2612f14c"
+    end
+  end
 
-  depends_on "rust" => :build
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
+
+  def target_triple
+    cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
+    os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
+
+    "#{cpu}-#{os}"
+  end
+
+  def install_binary_aliases!
+    BINARY_ALIASES[target_triple.to_sym].each do |source, dests|
+      dests.each do |dest|
+        bin.install_symlink bin/source.to_s => dest
+      end
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "tinycloud-node-server")
-  end
+    bin.install "tinycloud" if OS.mac? && Hardware::CPU.arm?
+    bin.install "tinycloud" if OS.mac? && Hardware::CPU.intel?
+    bin.install "tinycloud" if OS.linux? && Hardware::CPU.arm?
+    bin.install "tinycloud" if OS.linux? && Hardware::CPU.intel?
 
-  # `brew services` integration is a fallback for users who manage services
-  # via `brew services start/stop/restart tinycloud-node`. The CLI's own
-  # `tinycloud node service install|start|stop|status|uninstall` (a real
-  # launchd LaunchAgent on macOS, systemd unit on Linux) is the primary,
-  # documented way to run this as a service — see docs/specs/node-control-plane-v1.md.
-  # This block mirrors what `tinycloud node service install` generates so the
-  # two paths stay behaviorally equivalent, but installs/manages the plist via
-  # Homebrew's service manager instead of the CLI's own launchd/systemd calls.
-  service do
-    config_path = "#{Dir.home}/Library/Application Support/TinyCloud Node/tinycloud.toml"
-    run [opt_bin/"tinycloud", "serve", "--config", config_path]
-    keep_alive true
-    log_path var/"log/tinycloud-node.log"
-    error_log_path var/"log/tinycloud-node.err.log"
-  end
+    install_binary_aliases!
 
-  test do
-    assert_match "tinycloud", shell_output("#{bin}/tinycloud --version")
+    # Homebrew will automatically install these, so we don't need to do that
+    doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
+    leftover_contents = Dir["*"] - doc_files
 
-    # Sanity check the JSON contract shape without a real install: with no
-    # service installed, `service status --json` must still succeed and
-    # report state "not-installed" (see docs/specs/node-control-plane-v1.md §3.3).
-    require "json"
-    status = JSON.parse(shell_output("#{bin}/tinycloud node service status --json"))
-    assert_equal "not-installed", status["state"]
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
+    pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
 end
