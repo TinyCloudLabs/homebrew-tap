@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.5.0"
+  version "1.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "d9ad7cba65b40890643ced18e23e0d4528b977a873d40c8d6eb6da0cc7b4d918"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "dd19d4563df66d9e81e7544be4933e65281b65c40ead8aaad704b52348c69371"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "20e3bbf43b4b0ddf21ce2bf02330a592f3ce7d8b11b75feac542e64eba46b3f7"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "95df139c7e39dc7ae4ca0cdfc699175f259be0324f886f24d07c0c108cb3cc72"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "02b36dbb1010d828f44cec4c57c0f674f8e00f5fad68e9015d6e344521e75031"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e78b398622ed489ba8144f4e8dabebc435dd23257ea76bd604ae38aa7aaef0f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.5.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ff0b5418b71ec043903cc29fc6ca8e42d87ad99f412ddedf911d497f2612f14c"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4dc257ec6c37a3dd08b3531cea2f4690c350deb1e64a73bb521a4b8d4e3f256c"
     end
   end
 
