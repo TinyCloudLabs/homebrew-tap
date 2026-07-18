@@ -8,67 +8,6 @@ class TinycloudNode < Formula
 
   depends_on "rust" => :build
 
-  # --- Stable release block -------------------------------------------------
-  # Placeholders below. TC-79 (Homebrew packaging) ships in the same PR as the
-  # `tinycloud node service` / `serve` CLI surface this formula depends on.
-  # Published releases as of this writing (v1.4.x) predate that CLI, so there
-  # is no usable stable tarball yet. Once TC-79 merges to main and the next
-  # `vX.Y.Z` tag runs through .github/workflows/release.yml, replace `version`
-  # and each `sha256` below with the real release values (the release job
-  # uploads one `tinycloud-node-<target>.tar.gz` per cargo-dist target — see
-  # [workspace.metadata.dist] in Cargo.toml). Until then this stable block is
-  # inert scaffolding; `brew install tinycloud-node` will fail to resolve a
-  # bottle/tarball, and `--HEAD` (below) is the only working install path.
-  # `version` is intentionally omitted: brew scans it from the `vX.Y.Z` tag in
-  # each URL below, so bumping the tag is the only edit needed on release.
-  on_macos do
-    on_arm do
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-aarch64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
-    end
-    on_intel do
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-x86_64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
-    end
-  end
-  on_linux do
-    on_arm do
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
-    end
-    on_intel do
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v0.0.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # PLACEHOLDER (64 hex chars)
-    end
-  end
-
-  # --- HEAD build (usable today) --------------------------------------------
-  # `head` above intentionally targets the `main` branch (Homebrew style: head
-  # specs should track the default branch, and `brew audit --strict` flags a
-  # hardcoded feature-branch ref as a formula smell). Until TC-79's PR
-  # (skgbafa/tc-58-node-service) merges, `main` does not yet have the
-  # `tinycloud node service` / `serve --config` CLI this formula's `service do`
-  # and `test do` blocks exercise.
-  #
-  # To validate against the feature branch *before* merge, do not edit this
-  # file's head branch. Instead, test the CLI directly against the branch:
-  #
-  #   git clone --branch skgbafa/tc-58-node-service \
-  #     https://github.com/TinyCloudLabs/tinycloud-node.git /tmp/tinycloud-node-tc79
-  #   cd /tmp/tinycloud-node-tc79 && cargo build --release -p tinycloud-node
-  #   /tmp/tinycloud-node-tc79/target/release/tinycloud --version
-  #
-  # Or, to exercise this exact formula against the branch with brew's build
-  # sandbox (temporary local-only edit, never commit the branch pin):
-  #
-  #   sed -i '' 's/branch: "main"/branch: "skgbafa\/tc-58-node-service"/' \
-  #     Formula/tinycloud-node.rb
-  #   brew install --HEAD --build-from-source ./Formula/tinycloud-node.rb
-  #   git checkout Formula/tinycloud-node.rb   # revert the pin before pushing
-  #
-  # After TC-79 merges to main, plain `brew install --HEAD tinycloud-node`
-  # against this tap works with no edits.
-
   def install
     system "cargo", "install", *std_cargo_args(path: "tinycloud-node-server")
   end
