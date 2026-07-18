@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.6.0"
+  version "1.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "dd19d4563df66d9e81e7544be4933e65281b65c40ead8aaad704b52348c69371"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "44ff1f2611e8e41ca974bcf63bdb1af84cd45a68eaace70193685e6da28d15b6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "95df139c7e39dc7ae4ca0cdfc699175f259be0324f886f24d07c0c108cb3cc72"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "08c3631ff539d2e28e82420189d21a20cd3a81cb2b771236410f13011446b256"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e78b398622ed489ba8144f4e8dabebc435dd23257ea76bd604ae38aa7aaef0f0"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9f72ff5a16adf4a63202b573fe191a8e46574f5591c96f0aef3c549a8c9d059a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4dc257ec6c37a3dd08b3531cea2f4690c350deb1e64a73bb521a4b8d4e3f256c"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d10e57aed59e0681ac31ad5c6c63e1094618b33dbd59f72046a0fe885a8a66c5"
     end
   end
 
