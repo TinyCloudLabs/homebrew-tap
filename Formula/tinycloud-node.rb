@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.6.1"
+  version "1.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "44ff1f2611e8e41ca974bcf63bdb1af84cd45a68eaace70193685e6da28d15b6"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "9784d93d17e91b9814f70a5d21dbba48758fab71580edee488891656dcae4b50"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "08c3631ff539d2e28e82420189d21a20cd3a81cb2b771236410f13011446b256"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "fe8603350117c8eea8eda96a6ba589c37129859e2bc6699d409e9369a7631982"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9f72ff5a16adf4a63202b573fe191a8e46574f5591c96f0aef3c549a8c9d059a"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7eba4b0bbcb1c14c2e1ec55a29a3eb1557c103331abdd3c9ed58d52783387855"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.6.1/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d10e57aed59e0681ac31ad5c6c63e1094618b33dbd59f72046a0fe885a8a66c5"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bdd446eb2a34d4b73ffaf49e88ba43c24601f6faa31e60bca3f49947633d110a"
     end
   end
 
