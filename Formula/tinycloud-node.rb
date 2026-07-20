@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.7.0"
+  version "1.8.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "9784d93d17e91b9814f70a5d21dbba48758fab71580edee488891656dcae4b50"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "61fa34e5669ca3ab00e4cad9dd117f6c5a80d1f702738a1134938cf22a473246"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "fe8603350117c8eea8eda96a6ba589c37129859e2bc6699d409e9369a7631982"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "391fb7ccea472fbce28a111d62a2155623cb2b2127718eb3ac9cb53da6d985ba"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7eba4b0bbcb1c14c2e1ec55a29a3eb1557c103331abdd3c9ed58d52783387855"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "17dd09fd0d738c3c8634829d4f1abfe6b2511478be6e7e0a80bf5aeab2586dfb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.7.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bdd446eb2a34d4b73ffaf49e88ba43c24601f6faa31e60bca3f49947633d110a"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1820ece8d0f9f6d630ba9d66fa7a2cdf4a10e101d238bab30d5faae83b3cc228"
     end
   end
 
