@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.8.0"
+  version "1.9.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "61fa34e5669ca3ab00e4cad9dd117f6c5a80d1f702738a1134938cf22a473246"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.9.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "12c50db2feaac94a6fd58a1d3a181a624a9923ec5f38fedf2395699caa23044c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "391fb7ccea472fbce28a111d62a2155623cb2b2127718eb3ac9cb53da6d985ba"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.9.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "06235191f6ae16f8849f9f0c3d6b98c43489a2925c0defbe5d1a6a84346d8c0f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "17dd09fd0d738c3c8634829d4f1abfe6b2511478be6e7e0a80bf5aeab2586dfb"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.9.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3f2e05923d8dbbae16e90b2d330d88830e7ff9348a4c8dc14fe71d9ee20bece7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.8.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1820ece8d0f9f6d630ba9d66fa7a2cdf4a10e101d238bab30d5faae83b3cc228"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.9.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b2e73ceb2f8b4dd18ae72f5e5c9b566e8224ed1ce5918866566ad363a1144bcb"
     end
   end
 
@@ -46,10 +46,10 @@ class TinycloudNode < Formula
   end
 
   def install
-    bin.install "tinycloud" if OS.mac? && Hardware::CPU.arm?
-    bin.install "tinycloud" if OS.mac? && Hardware::CPU.intel?
-    bin.install "tinycloud" if OS.linux? && Hardware::CPU.arm?
-    bin.install "tinycloud" if OS.linux? && Hardware::CPU.intel?
+    bin.install "export-share-invitation-descriptor", "tinycloud" if OS.mac? && Hardware::CPU.arm?
+    bin.install "export-share-invitation-descriptor", "tinycloud" if OS.mac? && Hardware::CPU.intel?
+    bin.install "export-share-invitation-descriptor", "tinycloud" if OS.linux? && Hardware::CPU.arm?
+    bin.install "export-share-invitation-descriptor", "tinycloud" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
