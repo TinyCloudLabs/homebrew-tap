@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.11.0"
+  version "1.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.11.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "911d9f358f418d7279ec91fa037200d8c23c4aa007b7262c2551e390fe8da9a7"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.12.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "e755fb9f598c5ea68f56b36f1e9a6092d4e0006b7ae153481b117578c876d231"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.11.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "053a03968cc94123d65265d1a6a6b73bcc1828f990517006f8de95157c330c3c"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.12.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "898179737b710e2eb9ce345ad9d514796ebad301fa35e8e5b3fdf54c915c10e5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.11.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5ee28092ba792a0a77d371ea0a2185993e7f1d2a4c43b6689b53bd8529764a84"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.12.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8e6a8dbad9e7a9f957cd19d5b1430dcaacbe61a09f1246055e6bdabb22b558c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.11.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "316ddfea820ce8fc115cca8992eea8c2e67ea1a36703b4dd7870a272c3905a5f"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.12.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b54b9ca1890e8ba5681ba9b4a3cde5f9cdd08cd4aaeda95cd695e76537ae8bb6"
     end
   end
 
