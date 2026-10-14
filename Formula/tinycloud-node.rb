@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.20.4"
+  version "1.20.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.4/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "b249d7dee2bc89e87b08a2084f21a6fb1e175a56ce3fc525c1b15361bcf0e7ac"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.5/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "537e1315996d3973237ad5e19a6d501a94a64bd8fe2d6450aeb8a0a7b03371e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.4/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "31fec9ebbab8ebe48a93813cddcfc6dfed38a515cf4ad5f546aa7eebfe469372"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.5/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "ecfd5ed8cf71260f294802704fb14695a7c6a031064c9352609d3d1d6ffbff59"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.4/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "18df89300ecb1e112757aa2df31230b75c2cd057aa0c33feade50610560802a8"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.5/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ab373938770df77ac2e4ff6b62aa560e98da13894ffbfc3ff6c96c44627e96bd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.4/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "95d2d48f5626606b6dbf29844d2e7bf30302ca49fa03e96193c5f6d831acb7d6"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.5/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "26b2d922b5c83bbcada13cd5ad712aae39388da9f931671560cb64067ce19ca5"
     end
   end
 
