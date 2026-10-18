@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.20.7"
+  version "1.21.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.7/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "b33d4766f3516abf3a8eb96888e5c2607959968ad2136dce71d152c1b23aa915"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "df349c93e1050c98c65c51e95908858c79b6ef876bb1e093483385da20a83a93"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.7/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "1acca7bbd9d649a05715d0c9ac308be25c4efedb2c06bcecbfe2a3658fc54836"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "57c6d9223a0d6dd9b2f890ab9e1288dcc461c62a8e1ce7e766348f8e4cb8368a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.7/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a0c594c30bcb8afb73d92b1c57297bf48aab68cdd7ee18422939229337bd75a3"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ffbb28699483ddcb2319014fe4624fa59f040b350d9858a1ee084b02d45377ce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.20.7/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3c8d4f1edb490efe26c003fe4a10bdadfe78d9b802bbe4cd9a2fbe06b703683b"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f3262ce59888bbbd104b4f46e46d6e6d282aa76bc3df20c5f202a4278756bac2"
     end
   end
 
