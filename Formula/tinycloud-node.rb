@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.21.9"
+  version "1.22.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "385db76756883e9b28a7777ecac17493dd39022efb0b468af9788ba06da6b7c4"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.22.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "0f6fb51c04291be2cccfe42f271bbd28026e3de2876f7f9429dcf31016689ef6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "247cb8366b97f3775f4f05b8e9ba752ef01839e842877f52c133efbc2c9a51f0"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.22.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "f197f6534917ed8c85ac95958f914ffab33ce3c8d61f3b21ccfbc4eeb6a7af20"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "716133b631ce65e7ac5654ed94602103567632177d116b0dc695034f1784a90b"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.22.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f59190538ca7eb857e0858cd164f09b37047a8efab7c14a2236a6a483d11dabf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3930a1f4139f55ecc3f2a8c0b23bcb560995f52f444def02fd35a02119ff5843"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.22.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9e54b21b590186f29c169ae5ba0d8eb9507c295f1679b19d863ecf985c2141cb"
     end
   end
 
