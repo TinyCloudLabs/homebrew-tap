@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.21.8"
+  version "1.21.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.8/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "a6e354ac17ef9b131ffb97f2027f0df1e7620cfe7394a6b77378213e76ae2130"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "385db76756883e9b28a7777ecac17493dd39022efb0b468af9788ba06da6b7c4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.8/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "74af25293ef16d9dc071b6600621fb0d12a4cad2fdb6d62f181e409f27f739a6"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "247cb8366b97f3775f4f05b8e9ba752ef01839e842877f52c133efbc2c9a51f0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.8/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0b39c80b622b6c8ba154e8a4acaf9f12350a59b77adf33b110bc9226fe285c59"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "716133b631ce65e7ac5654ed94602103567632177d116b0dc695034f1784a90b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.8/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f31b8159572def019d7710f9f95732eb9e7bae513132957ed45a0e416b25bddd"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.21.9/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3930a1f4139f55ecc3f2a8c0b23bcb560995f52f444def02fd35a02119ff5843"
     end
   end
 
