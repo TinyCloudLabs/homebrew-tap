@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.23.0"
+  version "1.24.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.23.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "5cd239f48af902fead15f72f1c17339757e63c855131c739cd070923d72db3b0"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.24.0/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "8c536c5b22f851562ec99074e9f03ff72c116fe35b37c21798f90710e700c8ad"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.23.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "924bc50ce6265e39584285255d9e28e555ec985ec274db29ba851c2825d8915e"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.24.0/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "62431efdaaf41448aa9baa9fab4b0d5b30311854ad8b7d0f21287513909268ef"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.23.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2c3f94a7addb0a3676dc05efeb791fa6e7dc564cf4cc4904d5aded9f73f12411"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.24.0/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8ae35aad8a5d390cb85eebbf32947c30078f90e07d78ed70a180c25940de29e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.23.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e44597de1beb35b31d4e410dfebef153ab035b3c0a06f6ed3c145521df9ffebf"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.24.0/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "68b54762e0b2716ddb884627d87c026c34751a76ce9c2d63ff2627982fa45700"
     end
   end
 
