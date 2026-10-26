@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.3"
+  version "1.25.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.3/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "e8ad663a05ed281d861cbbe350ad5e608381766907831a93c2f5e2cf7bdc9d91"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "94c50e16e5b33b74bcc93eec2c6b065c579d67bb102cbb2a3144df1493c64a86"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.3/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "90fbd2e6cbf31fe97d497485c7f4cc1b7a55a9b1190c9ff1f7af6556548a0ef2"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "489158aa74a999a6890b51ee9d7f5a9bea766b6d764991e5a1d8faf6743c285c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.3/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e4cf04b61a047787d22207fcdac22a545e520acc16527bf9bd7d53ba9663be21"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fedef739346061585af4d26547ca16fb226aa5c73fd886e6c1ac9283c6a3ba6d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.3/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "565ef62ddaa3699d228160ccec9f97aa1773a41963d51f637fc0af754dd86567"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "774d3c28b1c39783d7d0af52621c818a965eedabbeaef9909597d50dccf78cab"
     end
   end
 
