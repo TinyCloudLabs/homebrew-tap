@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.4"
+  version "1.25.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "94c50e16e5b33b74bcc93eec2c6b065c579d67bb102cbb2a3144df1493c64a86"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.5/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "0088b4e6b5f25874a16f6b731f04fd2707967ca3c440ab94aae31109c4107a95"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "489158aa74a999a6890b51ee9d7f5a9bea766b6d764991e5a1d8faf6743c285c"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.5/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "b78be8b8130f0f23d6273dc6e5890b55c268619ad598f008686d4e5654c187d6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fedef739346061585af4d26547ca16fb226aa5c73fd886e6c1ac9283c6a3ba6d"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.5/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "acb813b17dc4763afdd9d686b69a0a272273e4838c007fa5140ca07e71ee83e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.4/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "774d3c28b1c39783d7d0af52621c818a965eedabbeaef9909597d50dccf78cab"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.5/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a264240fe2275160cad2c0df0e61f70437b70f075a730a1134c051b2460a3560"
     end
   end
 
