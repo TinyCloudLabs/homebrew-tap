@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.1"
+  version "1.25.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.1/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "64e390da56b629b0cbeea433bfb521be81be1227db0e6b2b587ba43c601775a2"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.2/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "86666ea819a7838d9d7ec8141024ada9aefb68805a7d96a80f19587829572ded"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.1/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "ca83bb2dda22c03a2b58e4565d814efda9693103fe717aff050003b3e678f311"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.2/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "3d9f406ad1149438a1562a0b6680993af51f28df9fb5b915e0ffb8b2aa2a8cc7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.1/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3a8117187bbd91461ff1d3e53aaa08af3fd0fbf6f49f18c2bde67692092fd5cd"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.2/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5eb51ecbac3e90d78e1bec7bd554bb5b048a946d88ff5c01d180882e642cda92"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.1/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b3cff77be05398afc7f1d59691120bf271172b3eef0390b66aaa26c53f29e9d8"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.2/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5b0379f0281f4437b412e745fc80ad27c6bb8e2482e6859bd75636120c52016e"
     end
   end
 
