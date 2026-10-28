@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.10"
+  version "1.25.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "70c01675c04f703a770105308a2161d0d9f803320944412234345015b515284d"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.11/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "eb50521170163ba98c0c269cb390a5f8b6b43d43dfc8965ffbd3e22b65f5c357"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "506fb5c02ec416cb1aafa0743ff0adf3e2d55d556da94f50b3600ec9cdfd8399"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.11/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "c10151d67fb1bc2083fab4cf614c166aec491bf2fba516c136df6f6bb42ea447"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "28e0160fbe383b94b1de54291431b9205f1e17e5bb4f27814c32271b160d4706"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.11/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "18d356b67cc05fd54aeb603a0234e3253aa58554df61a15fb30bc4a0bd70e402"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3d7e5556b6033c73abaa53247b1dbc13bdecea116b93bac17fcb8492cc31b30d"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.11/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8019bb14a5d91a2c6fd98e4f3e1f083fd07232022f47187bf3f626da8fbb42ed"
     end
   end
 
