@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.9"
+  version "1.25.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.9/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "513e1ee5fca37790262348627541ed3c78cd2d42093a031c616300f62af2f6e6"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "70c01675c04f703a770105308a2161d0d9f803320944412234345015b515284d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.9/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "f328d7ca84df29e477efdbb607344a066a880b0a5cb3857345b656d463551aed"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "506fb5c02ec416cb1aafa0743ff0adf3e2d55d556da94f50b3600ec9cdfd8399"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.9/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9f887f9ca95d8c07d597f95a12d95dbf89d690afaeb285cf09f5c8c7c5937ce9"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "28e0160fbe383b94b1de54291431b9205f1e17e5bb4f27814c32271b160d4706"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.9/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b7874e2a51521e3ec783047e8b369d3f18cb3d1c41b30c0563cd81446cb8a3b5"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.10/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3d7e5556b6033c73abaa53247b1dbc13bdecea116b93bac17fcb8492cc31b30d"
     end
   end
 
