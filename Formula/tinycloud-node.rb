@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.25.14"
+  version "1.25.16"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.14/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "b5743f03a66777820ae8ba37ac36423ff42d62db02ae99e2d33fbede44c014ea"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.16/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "e62c37ca0f2fa9418749cd0a797ab78d0b31ed59e9b6924c28f9218b3aaccba5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.14/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "cc5c33aa065fa532fd0108dce2451fdcb4d20db9b98bef4533f6f50f1e8f7184"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.16/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "3fcb16307f9df156054c6db782142a81f878816c8be47b751a3c644c22093bbc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.14/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "12759cb67bdb4f8fc85c9aca520c8a5acb09b99493d4b8b5f68d5c7c4829002c"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.16/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9111f9323bcb84c87a117adf7575b9770c3e75f5959e952b1e5f4470cf325caa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.14/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0f1ab787eb43f2ec237c9db7ad45b1009c1ff90f72e656f849736bf9ae6757ad"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.25.16/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2f69d9b7a01d5d8e5603a03688d40daaa35a694edf6295467c5d9b1896e7c6bb"
     end
   end
 
