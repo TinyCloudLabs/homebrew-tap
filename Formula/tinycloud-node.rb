@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.26.8"
+  version "1.26.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "1aa74a07f255a2ca9b29791f0bfee8cfcecd0049b472192c8115d68f1c8b7730"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.9/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "e50a540f581a34c13a515e3bb902603ffe7803c16f64d0dc86c094eba9e8af26"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "8b01a0fcb733d6e2ce89b267d73d68c36d93d240d7b1fb9e870f2c8e2f160580"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.9/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "9e716217dc0ac103375358c2b16f7e29c2d4937d72811c39b536465b2016aa3b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b41c5d137b93e079759cd21e3df0dc692a2ff3b3d7487d213d9b41a26f4cbe10"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.9/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "09fe3047fc30d969ac426d3b534e07ef7402bfa828689d9ed8b600646736669a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8bfd98e11723d2f0f52a80b617061662c374fc96242bda24bf56bad1cb37d0df"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.9/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9d4878819ac1433442d93832f2629c28c2e6a76b6ea172ea6bb62bbdcc287cc7"
     end
   end
 
