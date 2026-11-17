@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.26.7"
+  version "1.26.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.7/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "512dc26fbeb16c1051ec2be99d9d56aebedd2a407a50e5b127b83d298c50d8ac"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "1aa74a07f255a2ca9b29791f0bfee8cfcecd0049b472192c8115d68f1c8b7730"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.7/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "c24509d3372939e6deb51a7e3d0d9cb52b5d9e6aee617c0ed08f2a1ffc619314"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "8b01a0fcb733d6e2ce89b267d73d68c36d93d240d7b1fb9e870f2c8e2f160580"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.7/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b9334aa74c0f5a32efe7949ed284ce8a7e47734672dc08d85e87ac3b151d6e8b"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b41c5d137b93e079759cd21e3df0dc692a2ff3b3d7487d213d9b41a26f4cbe10"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.7/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5efaf65d09e5c2ab799a81598821894519e70e77bcd2ca325a4c31bbaa805536"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.8/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8bfd98e11723d2f0f52a80b617061662c374fc96242bda24bf56bad1cb37d0df"
     end
   end
 
