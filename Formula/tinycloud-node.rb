@@ -1,25 +1,25 @@
 class TinycloudNode < Formula
   desc "TinyCloud Protocol Node"
   homepage "https://github.com/TinyCloudLabs/tinycloud-node"
-  version "1.26.11"
+  version "1.26.12"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.11/tinycloud-node-aarch64-apple-darwin.tar.xz"
-      sha256 "9d7e4fe59921056febae6c9783a2d7e4577a550ed730f6637decdfa5764a9718"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.12/tinycloud-node-aarch64-apple-darwin.tar.xz"
+      sha256 "92c1eebd24fd6e1b4f0e11aadf420a79935fee379c6c248f21fb3983f9c71bda"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.11/tinycloud-node-x86_64-apple-darwin.tar.xz"
-      sha256 "5b84643e54e320ed7fe09f334c5aba36c5c2ae48ad76541975a9d2e72f80fdd8"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.12/tinycloud-node-x86_64-apple-darwin.tar.xz"
+      sha256 "a26289e564ea5658a2605fc88435fc8185a7d86d3e5a89188485db44a4483a85"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.11/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e3f1ed14449fe6a7f1265fbfce2833c0058693474d60af521f50c977303f4313"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.12/tinycloud-node-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0bb6cc34e0928a8d8c290758c77921ec726b3a5a0f12f52e003aed05d822a5ec"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.11/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8f5213e8e7f228c58ef8fa83cce4ee41b4449f7a0a190b1e3b7b6c8214b94d1e"
+      url "https://github.com/TinyCloudLabs/tinycloud-node/releases/download/v1.26.12/tinycloud-node-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "525520a8a7edc22c9b1270f8a42ff39722922bd4a45e0ccd38e33d74349958dd"
     end
   end
 
